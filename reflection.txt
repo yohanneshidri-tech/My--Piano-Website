@@ -1,0 +1,37 @@
+KEYBOARD PIANO REFLECTION
+
+
+1. What is the difference between keydown and keyup?
+Why did we need both?
+
+keydown happens when I press a keyboard key.
+
+keyup happens when I release the keyboard key.
+
+We need both because keydown makes the piano key active and plays the sound, while keyup removes the active style when I release the key.
+
+
+2. What information does the event object e give you?
+Name two properties you used.
+
+The event object gives information about the event that happened.
+
+Two things I used are:
+
+e.key - tells me which keyboard key was pressed.
+
+e.repeat - tells me if the key is being held down and repeating.
+
+
+3. Why did we listen on document instead of on each piano key for the keyboard?
+
+We used document because the physical computer keyboard is outside the piano HTML elements.
+
+The document can listen for keyboard events anywhere on the page and then find the matching piano key.
+
+
+4. Name one other place on a real website where an event listener is used.
+
+A website can use an event listener when a user clicks a button.
+
+For example, clicking a Submit button can send a form or show a message.
