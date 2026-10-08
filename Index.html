@@ -3,9 +3,260 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Piano Assignmnet</title>
+
+    <title>My Keyboard Piano</title>
+
+    <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-    
+
+    <h1>🎹 My Keyboard Piano</h1>
+
+    <p class="instruction">
+        Press <strong>A S D F G H J K</strong> on your keyboard to play
+    </p>
+
+    <!-- Last note -->
+    <div class="last-note-box">
+        Last Note:
+        <span id="lastNote">Do</span>
+    </div>
+
+
+    <!-- Piano -->
+    <div class="piano">
+
+        <!-- White keys -->
+
+        <div class="key white-key"
+             data-key="a"
+             data-note="C"
+             data-solfege="Do"
+             data-frequency="262">
+
+            <span class="note-name">C</span>
+            <span class="solfege">Do</span>
+            <span class="keyboard-key">A</span>
+
+        </div>
+
+
+        <div class="key white-key"
+             data-key="s"
+             data-note="D"
+             data-solfege="Re"
+             data-frequency="294">
+
+            <span class="note-name">D</span>
+            <span class="solfege">Re</span>
+            <span class="keyboard-key">S</span>
+
+        </div>
+
+
+        <div class="key white-key"
+             data-key="d"
+             data-note="E"
+             data-solfege="Mi"
+             data-frequency="330">
+
+            <span class="note-name">E</span>
+            <span class="solfege">Mi</span>
+            <span class="keyboard-key">D</span>
+
+        </div>
+
+
+        <div class="key white-key"
+             data-key="f"
+             data-note="F"
+             data-solfege="Fa"
+             data-frequency="349">
+
+            <span class="note-name">F</span>
+            <span class="solfege">Fa</span>
+            <span class="keyboard-key">F</span>
+
+        </div>
+
+
+        <div class="key white-key"
+             data-key="g"
+             data-note="G"
+             data-solfege="Sol"
+             data-frequency="392">
+
+            <span class="note-name">G</span>
+            <span class="solfege">Sol</span>
+            <span class="keyboard-key">G</span>
+
+        </div>
+
+
+        <div class="key white-key"
+             data-key="h"
+             data-note="A"
+             data-solfege="La"
+             data-frequency="440">
+
+            <span class="note-name">A</span>
+            <span class="solfege">La</span>
+            <span class="keyboard-key">H</span>
+
+        </div>
+
+
+        <div class="key white-key"
+             data-key="j"
+             data-note="B"
+             data-solfege="Ti"
+             data-frequency="494">
+
+            <span class="note-name">B</span>
+            <span class="solfege">Ti</span>
+            <span class="keyboard-key">J</span>
+
+        </div>
+
+
+        <div class="key white-key"
+             data-key="k"
+             data-note="C"
+             data-solfege="Do"
+             data-frequency="523">
+
+            <span class="note-name">C</span>
+            <span class="solfege">Do</span>
+            <span class="keyboard-key">K</span>
+
+        </div>
+
+
+        <!-- Black keys -->
+
+        <div class="key black-key black-c"
+             data-key="w"
+             data-note="C#"
+             data-solfege="Do#"
+             data-frequency="277">
+
+            <span>W</span>
+        </div>
+
+
+        <div class="key black-key black-d"
+             data-key="e"
+             data-note="D#"
+             data-solfege="Re#"
+             data-frequency="311">
+
+            <span>E</span>
+        </div>
+
+
+        <div class="key black-key black-f"
+             data-key="t"
+             data-note="F#"
+             data-solfege="Fa#"
+             data-frequency="370">
+
+            <span>T</span>
+        </div>
+
+
+        <div class="key black-key black-g"
+             data-key="y"
+             data-note="G#"
+             data-solfege="Sol#"
+             data-frequency="415">
+
+            <span>Y</span>
+        </div>
+
+
+        <div class="key black-key black-a"
+             data-key="u"
+             data-note="A#"
+             data-solfege="La#"
+             data-frequency="466">
+
+            <span>U</span>
+        </div>
+
+    </div>
+
+
+    <!-- Sound selector -->
+
+    <div class="controls">
+
+        <label for="soundSelect">
+            Choose Sound:
+        </label>
+
+        <select id="soundSelect">
+
+            <option value="sine">
+                Sine
+            </option>
+
+            <option value="square">
+                Square
+            </option>
+
+            <option value="triangle">
+                Triangle
+            </option>
+
+            <option value="sawtooth">
+                Sawtooth
+            </option>
+
+        </select>
+
+    </div>
+
+
+    <!-- Famous songs -->
+
+    <div class="song-box">
+
+        <h2>🎵 Famous Songs</h2>
+
+        <p>
+            Choose a song and play the notes using your piano.
+        </p>
+
+        <select id="songSelect">
+
+            <option value="birthday">
+                Happy Birthday
+            </option>
+
+            <option value="joy">
+                Ode to Joy
+            </option>
+
+            <option value="twinkle">
+                Twinkle Twinkle Little Star
+            </option>
+
+            <option value="jingle">
+                Jingle Bells
+            </option>
+
+        </select>
+
+
+        <div id="songNotes">
+            G G A G C B
+        </div>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
 </body>
 </html>
