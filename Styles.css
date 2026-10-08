@@ -1,0 +1,374 @@
+* {
+    box-sizing: border-box;
+}
+
+
+body {
+    margin: 0;
+    padding: 30px 15px;
+
+    font-family: Arial, sans-serif;
+
+    background: linear-gradient(
+        to bottom,
+        #eeeeee,
+        #d5d5d5
+    );
+
+    text-align: center;
+
+    color: #222;
+}
+
+
+/* Piano title */
+
+h1 {
+    margin-bottom: 8px;
+
+    font-size: 36px;
+
+    color: #222;
+}
+
+
+.instruction {
+    font-size: 18px;
+
+    margin-bottom: 20px;
+}
+
+
+/* Last note */
+
+.last-note-box {
+    display: inline-block;
+
+    background: white;
+
+    padding: 10px 25px;
+
+    margin-bottom: 25px;
+
+    border-radius: 8px;
+
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+
+    font-size: 18px;
+}
+
+
+#lastNote {
+    font-weight: bold;
+
+    color: #b8860b;
+}
+
+
+/* Piano body */
+
+.piano {
+    position: relative;
+
+    width: 720px;
+    height: 300px;
+
+    margin: 0 auto 30px;
+
+    padding: 12px;
+
+    display: flex;
+
+    background: linear-gradient(
+        to bottom,
+        #222,
+        #111
+    );
+
+    border: 8px solid #333;
+
+    border-radius: 12px;
+
+    box-shadow:
+        0 10px 20px rgba(0, 0, 0, 0.4),
+        inset 0 2px 5px rgba(255, 255, 255, 0.15);
+}
+
+
+/* All keys */
+
+.key {
+    cursor: pointer;
+
+    user-select: none;
+
+    transition:
+        transform 0.08s,
+        background 0.08s;
+}
+
+
+/* White piano keys */
+
+.white-key {
+    position: relative;
+
+    width: 87.5px;
+    height: 270px;
+
+    background: linear-gradient(
+        to right,
+        #ffffff,
+        #eeeeee
+    );
+
+    border: 1px solid #999;
+
+    border-radius: 0 0 7px 7px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: flex-end;
+
+    align-items: center;
+
+    padding-bottom: 15px;
+
+    box-shadow:
+        inset -3px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Space between white keys */
+
+.white-key + .white-key {
+    border-left: 1px solid #777;
+}
+
+
+/* Note name */
+
+.note-name {
+    font-size: 25px;
+
+    font-weight: bold;
+
+    color: #222;
+
+    margin-bottom: 5px;
+}
+
+
+/* Do Re Mi... */
+
+.solfege {
+    font-size: 18px;
+
+    font-weight: bold;
+
+    color: #555;
+
+    margin-bottom: 8px;
+}
+
+
+/* Computer keyboard letter */
+
+.keyboard-key {
+    width: 35px;
+    height: 35px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    border-radius: 50%;
+
+    background: #222;
+
+    color: white;
+
+    font-weight: bold;
+
+    font-size: 17px;
+}
+
+
+/* Black piano keys */
+
+.black-key {
+    position: absolute;
+
+    top: 12px;
+
+    width: 52px;
+    height: 170px;
+
+    z-index: 10;
+
+    background: linear-gradient(
+        to right,
+        #111,
+        #333,
+        #111
+    );
+
+    border-radius: 0 0 7px 7px;
+
+    border: 1px solid #000;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: flex-end;
+
+    padding-bottom: 15px;
+
+    color: white;
+
+    font-weight: bold;
+
+    font-size: 17px;
+
+    box-shadow:
+        0 5px 8px rgba(0, 0, 0, 0.5);
+}
+
+
+/* Position of black keys */
+
+.black-c {
+    left: 72px;
+}
+
+
+.black-d {
+    left: 160px;
+}
+
+
+.black-f {
+    left: 335px;
+}
+
+
+.black-g {
+    left: 422px;
+}
+
+
+.black-a {
+    left: 510px;
+}
+
+
+/* Key when played */
+
+.key.active {
+    background: #d4af37;
+
+    transform: translateY(5px);
+
+    box-shadow:
+        0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+
+/* Keep black keys dark when not active */
+
+.black-key.active {
+    background: #d4af37;
+
+    color: #111;
+}
+
+
+/* Controls */
+
+.controls {
+    margin: 20px auto;
+
+    font-size: 18px;
+}
+
+
+select {
+    padding: 9px 15px;
+
+    font-size: 16px;
+
+    border-radius: 6px;
+
+    border: 1px solid #777;
+
+    cursor: pointer;
+}
+
+
+/* Song box */
+
+.song-box {
+    width: 600px;
+
+    max-width: 90%;
+
+    margin: 25px auto;
+
+    padding: 20px;
+
+    background: white;
+
+    border-radius: 12px;
+
+    box-shadow:
+        0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+
+.song-box h2 {
+    margin-top: 0;
+
+    color: #333;
+}
+
+
+#songNotes {
+    margin-top: 18px;
+
+    padding: 15px;
+
+    background: #f3f3f3;
+
+    border-radius: 8px;
+
+    font-size: 20px;
+
+    font-weight: bold;
+
+    letter-spacing: 5px;
+
+    color: #555;
+}
+
+
+/* Mobile */
+
+@media (max-width: 760px) {
+
+    .piano {
+        transform: scale(0.75);
+
+        transform-origin: top center;
+
+        margin-bottom: -60px;
+    }
+
+    .song-box {
+        margin-top: 20px;
+    }
+}
